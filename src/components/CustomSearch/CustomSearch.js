@@ -8,6 +8,17 @@ class CustomSearch extends React.Component {
       <div className="search-wrapper">
         <input type='text' placeholder='Find movie'/>
         <img src={lookinGlass} id='looking-glass' alt=''/>
+        <ul className='searchResults'>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+          <li>result.........<span>+</span></li>
+        </ul>
       </div>
     )
   }

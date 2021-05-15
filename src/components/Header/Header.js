@@ -6,7 +6,7 @@ class Header extends React.Component {
   render(){
     return(
       <header>
-        <p>MOVIE WATCHLIST</p>
+        <h3>MOVIE WATCHLIST</h3>
         <CustomSearch />
       </header>
     )
