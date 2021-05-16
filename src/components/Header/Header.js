@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.scss';
-import {CustomSearch} from '../CustomSearch/CustomSearch';
+import CustomSearch from '../CustomSearch/CustomSearch';
 
 class Header extends React.Component {
   render(){
