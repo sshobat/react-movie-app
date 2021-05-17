@@ -4,6 +4,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from 'firebase';
 import { BrowserRouter } from 'react-router-dom';
+import {createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
+import {reducer} from './store/reducer';
+import {Provider} from 'react-redux';
 
 var firebaseConfig = {
   apiKey: "AIzaSyAH7ayWsC1dbiOeLLkgullTGoIYnExkS0A",
@@ -13,12 +17,14 @@ var firebaseConfig = {
   messagingSenderId: "373292683819",
   appId: "1:373292683819:web:ed4703f3db15703898106e"
 };
-
+const store = createStore(reducer, applyMiddleware(thunk));
 firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter><App /></BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter><App /></BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

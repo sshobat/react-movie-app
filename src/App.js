@@ -1,10 +1,11 @@
 import './App.css';
 import {Switch, Router} from 'react-router-dom';
+import {Header} from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      React movie app
+      <Header />
     </div>
     // <>
     //   <Switch>
